@@ -1,0 +1,48 @@
+<project name="PubSubSystem" default="test">
+	
+	<description>
+		TK1 - Programming 3
+	</description>	
+
+    <target name="clean">
+    	<delete failonerror="false" dir="bin" />
+    	<mkdir dir="bin" />  
+    </target> 
+
+    <target name="compile" depends="clean">
+    	<!--compile the .java files -->       	
+        <javac includeantruntime="true" srcdir="src" destdir="bin" includes="**/*.java" verbose="true"  >
+         <classpath>          
+           <pathelement path="lib/activemq-all-5.10.0.jar"/>
+         </classpath>
+        </javac>  <!-- verbose="true"-->
+    </target>
+
+    <target name="jar" depends="compile">    	
+    	<mkdir dir="jar" />
+    	<!-- generate pubsub jar -->
+    	<jar destfile="jar/Login.jar" basedir="bin" >    	
+    	    <archives>
+    	        <zips>
+    	            <fileset dir="lib" includes="**/*.jar"> </fileset>
+    	        </zips>    	        
+    	    </archives>   
+    	       <manifest>
+    	            <attribute name="Main-Class" value="com.pubsub.Login" /> 
+    	       </manifest> 
+    	 </jar>    	
+    </target>
+
+    <target name="run" depends="jar">  
+        <parallel>  	
+    		<!-- create jar file -->    		        	   
+    	    <java fork="true" failonerror="yes" classpath="jar/Login.jar" classname="com.pubsub.Login" >             	    	            	
+    	    </java>    		       	  
+    	     <java fork="true" failonerror="yes" classpath="jar/Login.jar" classname="com.pubsub.Login" >             	    	            	
+    	    </java> 
+    	</parallel>
+     </target>
+		
+     <target name="test" depends="run">
+     </target>
+ </project>
