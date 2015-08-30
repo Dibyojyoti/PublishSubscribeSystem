@@ -10,11 +10,13 @@ Group Members
 This is Micro Blog which shows a publish/subscribe application built using Java Active MQ  and JMS technology.
 
 This is an implementation of a Micro Blog System which handles the communication using the publish/subscribe paradigm. To implement the solution you have to use the Java Message Service (JMS). Any user of the system acts as producer and consumer at the same time.
+
 *Functional Requirements:*
 1. The GUI asks the user name to login on startup.
 2. Every user can publish messages and can add tags for every message.
 3. Every user can subscribe other users or tags.
 4. JMS coordination: There is no server anymore. Therefore, each client manages his own blog and exchanges the related information with the other clients.
+
 *Non Functional Requirements:*
 1. Use the Model-View-Control pattern
 2. Use Apache ActiveMQ Version 5.6.0 as message broker.
