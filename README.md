@@ -50,4 +50,4 @@ Steps to run the application
 9. when writing content of a topic user can specify any already existing topic using has tag ( like #topicname). and publish. while subscriber read the blog the hashtag will be click enabled. if user us subscribed to the topic and subscriber received blogs for the topic user can read all realted blogs by clicking the #tag otherwise specific mesages will be shown.
 
 Note:
-1. If you want to run the Build.xml again, restart the ActiveMQ because the topics that are created will be listed in ActiveMQ but as the subscribers are not made durable, they will be deleted once the client portal is closed.
+1. If you want to run the Build.xml again, restart the ActiveMQ because the topics that are created will be listed in ActiveMQ but as the subscribers are not made durable, they will be deleted once the client portal is closed.  
