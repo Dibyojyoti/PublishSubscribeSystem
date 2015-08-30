@@ -3,9 +3,9 @@ Publish/Subscribe application, in Distributed Systems Project in Winter 2014-15 
 
 Group Members
 
-Dibyojyoti Sanyal (https://github.com/Dibyojyoti) (@Dibyojyoti)
-Anirban Chatterjee (https://github.com/anirban99) (@anirban99)
-Pranay Sarkar (https://github.com/pranay22) (@pranay22)
+1. Dibyojyoti Sanyal (https://github.com/Dibyojyoti) (@Dibyojyoti)
+2. Anirban Chatterjee (https://github.com/anirban99) (@anirban99)
+3. Pranay Sarkar (https://github.com/pranay22) (@pranay22)
 
 This is Micro Blog which shows a publish/subscribe application built using Java Active MQ  and JMS technology.
 
